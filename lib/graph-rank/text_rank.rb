@@ -21,6 +21,7 @@ class GraphRank::TextRank
     @text = text
     get_features
     filter_features
+    return [] if filter_features.count < 2 
     build_graph
     calculate_ranking
   end
