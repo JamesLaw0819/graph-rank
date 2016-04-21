@@ -28,7 +28,7 @@ class GraphRank::Keywords < GraphRank::TextRank
 
   # Remove 1 and 2 char words.
   def remove_short_words
-    @features.delete_if { |word| word.length < 3 }
+    @features.delete_if { |word| word.length < 3 and word !="hr"}
   end
 
   # Build the co-occurence graph for an n-gram.
